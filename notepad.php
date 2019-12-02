@@ -92,6 +92,7 @@ var email = text.replace(/([a-z0-9_\.-]+@[a-z0-9]+\.(ru|com|net))/gm,
   
    var teg = text.replace(/((&lt;|&lt;\/)(\w+)&gt;)/gm,
    (username) => "<span class='exists5'>" + username + "</span>")
+   textarea.innerHTML = teg;
    text = textarea.innerHTML = teg
  
    var time = text.replace(/((0[0-9]+?|1[0-9]+?|2[0-3]+?)\:(0[0-9]+?|1[0-9]+?|2[0-9]+?|3[0-9]+?|4[0-9]+?|5[0-9]+?))/gm,
@@ -132,6 +133,13 @@ var email = text.replace(/([a-z0-9_\.-]+@[a-z0-9]+\.(ru|com|net))/gm,
    text = textarea.innerHTML = close
 
 
+   const div = $('div').get(0);
+   const range = document.createRange();
+    range.selectNodeContents(div);
+    range.collapse(false);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
                   }
 </script>
 
