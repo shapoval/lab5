@@ -61,7 +61,11 @@ function Change()
                    }
            
 
-    
+         var input= original.replace(/(?<=&lt;[a-zA-Zа-яА-Я0-1]+&gt;)([\s\S]*?)(?=&lt;\/[a-zA-Zа-яА-Я0-9]+&gt;)/gmi,
+               (username) => "<span class='exists'>" + username + "</span>")
+         textarea.innerHTML = input
+text = textarea.innerHTML = input
+
                   }
 </script>
 
