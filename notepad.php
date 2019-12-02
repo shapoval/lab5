@@ -15,6 +15,24 @@ header('Content-Type: text/html; charset=utf-8');
 
 <div contenteditable="true" onKeyUp="Change();" id="textarea"></div>
 
+<script>
+function Change()
+{
+   
+  var textarea = document.getElementById('textarea')
+ 
+ var original = textarea.textContent
+         
+         original = original.replace (/(\<)|(\>)/g, function(a){
+           //alert(a)// что нашли
+           if(a=="<"){return "&lt;"};
+           if(a==">"){return "&gt;"};
+           if(a==" "){return "&nbsp;"};            }); 
+      
+           
+      
+                  }
+</script>
 
 
 
