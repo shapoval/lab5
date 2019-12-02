@@ -12,7 +12,10 @@
 				<label for="fullname" class="block">ФИО:</label>
 				<input type="text" name="fullname" id="fullname" />
 			</p>
-		
+            <p>
+				<label for="birthday" class="block">Дата выдачи паспорта:</label>
+				<input type="text" name="birthday" id="birthday" />
+            </p>
 			</fieldset>
 	
 		
