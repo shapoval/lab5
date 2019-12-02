@@ -70,6 +70,68 @@ var email = text.replace(/([a-z0-9_\.-]+@[a-z0-9]+\.(ru|com|net))/gm,
    textarea.innerHTML = email;
    text = textarea.innerHTML = email
 
+   var color = text.replace(/(#[a-zA-Z0-9]{6})/gm,
+   (username) => "<span class='exists2'>" + username + "</span>")
+   textarea.innerHTML = color;
+   text = textarea.innerHTML = color
+
+   var ip = text.replace(/((([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4}|(\d{1,3}\.){3}\d{1,3}))/gm,
+   (username) => "<span class='exists3'>" + username + "</span>")
+   textarea.innerHTML = ip;
+   text = textarea.innerHTML = ip
+
+   var commit = text.replace(/((\/\/)[а-яА-Яa-zA-Z]+)/gm,
+   (username) => "<span class='exists4'>" + username + "</span>")
+   textarea.innerHTML = commit;
+   text = textarea.innerHTML = commit
+
+   var commit2 = text.replace(/(\/\*(.*?)\*\/)/gm,
+   (username) => "<span class='exists4'>" + username + "</span>")
+   textarea.innerHTML = commit2;
+   text = textarea.innerHTML = commit2
+  
+   var teg = text.replace(/((&lt;|&lt;\/)(\w+)&gt;)/gm,
+   (username) => "<span class='exists5'>" + username + "</span>")
+   text = textarea.innerHTML = teg
+ 
+   var time = text.replace(/((0[0-9]+?|1[0-9]+?|2[0-3]+?)\:(0[0-9]+?|1[0-9]+?|2[0-9]+?|3[0-9]+?|4[0-9]+?|5[0-9]+?))/gm,
+   (username) => times(username))
+   textarea.innerHTML = time;
+   text = textarea.innerHTML = time
+
+   var dates = text.replace(/(((0[1-9]|[12][0-9]|3[01])[\-|\/|\.](0[1-9]|1[012])[\-|\/|\.](19|20))\d\d)/gm,
+   (username) => date(username))
+   textarea.innerHTML = dates;
+   text = textarea.innerHTML = dates
+
+
+   var wrongdate = text.replace(/(((3[2-9]+?|4[0-9]+?|5[0-9]+?|6[0-9]+?|7[0-9]+?|8[0-9]+?|9[0-9])(\/|\.|\-)[0-9]{2}(\/|\.|\-)[\d]{4}|[\d]{2}(\/|\.|\-)(1[3-9]+?|2[0-9]+?|3[0-9]+?|4[0-9]+?|5[0-9]+?|6[0-9]+?|7[0-9]|8[0-9]|9[0-9])(\/|\.|\-)[\d]{4}))/gm,
+   (username) => "<span class='wrongs'> Неверная дата </span>")
+   textarea.innerHTML = wrongdate;
+   text = textarea.innerHTML = wrongdate
+
+   var wrongtime = text.replace(/((2[4-9]+?|4[0-9]+?|5[0-9]+?|6[0-9]+?|7[0-9]+?|8[0-9]+?|9[0-9])\:[0-9]{2}|[\d]{2}\:(6[0-9]+?|7[0-9]|8[0-9]|9[0-9]))/gm,
+   (username) => "<span class='wrongs'> Неверное время </span>")
+   textarea.innerHTML = wrongtime;
+   text = textarea.innerHTML = wrongtime
+
+   var wrongtime1 = text.replace(/Неверное\sвремя/gm,
+   (username) => "<span class='wrongs'> Неверное время </span>")
+   textarea.innerHTML = wrongtime1;
+   text = textarea.innerHTML = wrongtime1
+
+   var wrongdate1 = text.replace(/Неверная\sдата/gm,
+   (username) => "<span class='wrongs'> Неверная дата </span>")
+   textarea.innerHTML = wrongdate1;
+   text = textarea.innerHTML = wrongdate1
+
+
+   var close = text.replace(/((&lt;|\(|\[|\{)[a-z]+\s)/gm,
+   (username) =>  "<span class='wrongs'>" + username + "</span>")
+   textarea.innerHTML = close;
+   text = textarea.innerHTML = close
+
+
                   }
 </script>
 
