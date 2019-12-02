@@ -24,6 +24,22 @@
 				<label for="numindex" class="block">Почтовый индекс:</label>
 				<input type="text" name="numindex" id="numindex" />
             </p>
+            <p>
+				<label for="home" class="block">Домашний адрес:</label>
+				<input type="text" name="home" id="home" />
+			</p>
+            <p>
+				<label for="tel" class="block">Телефон:</label>
+				<input type="text" name="tel" id="tel" />
+			</p>
+				<p>
+				<label for="email" class="block">Email:</label>
+				<input type="text" name="email" id="email" />
+            </p>
+                      <p>
+				<label for="pass" class="block">Пароль:</label>
+				<input type="password" name="pass" id="pass" />
+			</p>
 			</fieldset>
 	
 		
