@@ -65,6 +65,10 @@ function Change()
                (username) => "<span class='exists'>" + username + "</span>")
          textarea.innerHTML = input
 text = textarea.innerHTML = input
+var email = text.replace(/([a-z0-9_\.-]+@[a-z0-9]+\.(ru|com|net))/gm,
+     (username) => "<span class='exists1'>" + username + "</span>")
+   textarea.innerHTML = email;
+   text = textarea.innerHTML = email
 
                   }
 </script>
