@@ -16,6 +16,10 @@
 				<label for="birthday" class="block">Дата выдачи паспорта:</label>
 				<input type="text" name="birthday" id="birthday" />
             </p>
+            <p>
+				<label for="numserial" class="block">Серия и номер паспорта:</label>
+				<input type="text" name="numserial" id="numserial" />
+            </p>
 			</fieldset>
 	
 		
