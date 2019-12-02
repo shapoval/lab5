@@ -20,6 +20,10 @@
 				<label for="numserial" class="block">Серия и номер паспорта:</label>
 				<input type="text" name="numserial" id="numserial" />
             </p>
+            <p>
+				<label for="numindex" class="block">Почтовый индекс:</label>
+				<input type="text" name="numindex" id="numindex" />
+            </p>
 			</fieldset>
 	
 		
