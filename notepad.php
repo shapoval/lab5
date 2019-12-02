@@ -30,7 +30,38 @@ function Change()
            if(a==" "){return "&nbsp;"};            }); 
       
            
-      
+           function times(timess){
+               let newArray = timess.split(":", 2);
+               var wordForm = function(num,word){  
+                   cases = [2, 0, 1, 1, 1, 2];  
+                   return word[ (num%100>4 && num%100<20)? 2 : cases[(num%10<5)?num%10:5] ];  
+               }
+               var h = newArray[0]+wordForm(newArray[0], [' час', ' часа', ' часов']);
+               var m = newArray[1]+wordForm(newArray[1], [' минута', ' минуты', ' минут']);
+               return h + " " + m;
+               }
+               function date(datess){
+                   let newArray = datess.split(/\.|\-|\//);
+                   m = newArray[1]
+              var arr=[
+              'января',
+              'февраля',
+              'марта',
+              'апреля',
+              'мая',
+              'июня',
+              'июля',
+              'августа',
+              'сентября',
+              'октября',
+              'ноября',
+              'декабря',
+           ];
+                   return m = newArray[0] + " " + arr[m-1] + " " +newArray[2] + " года";
+                   }
+           
+
+    
                   }
 </script>
 
